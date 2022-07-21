@@ -81,4 +81,31 @@ const drinks = {
 //display the result
 //----create a new html paragraph to append the location name of the shop
 
+//variables set by selecting DOM elements
+const formEl = document.querySelector("form");
+
+
+formEl.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const drinkUserOption = document.querySelector("input[name=beverage]:checked").value;
+  const priceUserOption = document.querySelector("input[name=price]:checked").value;
+
+  const drinkChoice = drinks[drinkUserOption];
+  const options = [];
+
+  for (let i = 0; i < drinkChoice.length; i++) {
+    const currentDrink = drinkChoice[i]
+
+    if (currentDrink.price === priceUserOption) {
+      options.push(currentDrink)
+    }
+  }
+
+  console.log(drinkChoice);
+  console.log(options);
+
+})
+
+
 
