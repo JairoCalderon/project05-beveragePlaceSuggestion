@@ -69,7 +69,6 @@ const drinks = {
   ]
 };
 
-
 // Our code goes here:
 
 //get data from the user
@@ -83,6 +82,14 @@ const drinks = {
 
 //variables set by selecting DOM elements
 const formEl = document.querySelector("form");
+const resultSection = document.querySelector(".results");
+const paragraphElmt = document.createElement("h2");
+
+//function to get random number to use as index number
+const randomChoice = (optionArray) => {
+  const index = Math.floor(Math.random() * optionArray.length)
+  return optionArray[index]
+}
 
 
 formEl.addEventListener("submit", function (e) {
@@ -102,10 +109,9 @@ formEl.addEventListener("submit", function (e) {
     }
   }
 
-  console.log(drinkChoice);
-  console.log(options);
+  const suggestedPlaceToVisit = randomChoice(options);
+
+  paragraphElmt.innerHTML = `${suggestedPlaceToVisit.title}`;
+  resultSection.appendChild(paragraphElmt);
 
 })
-
-
-
