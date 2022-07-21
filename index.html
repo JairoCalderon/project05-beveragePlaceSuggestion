@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Queen Street Hot Treat!</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+	<main>
+		<header>
+			<h1>👑 Queen Street Hot Treat! ☕️</h1>
+		</header>
+
+		<form action="">
+
+			<fieldset class="drink">
+				<legend>Do you want coffee or tea?</legend>
+
+				<label for="coffee">Coffee</label>
+				<input type="radio" name="beverage" id="coffee" value="coffee">
+
+				<label for="tea">Tea</label>
+				<input type="radio" name="beverage" id="tea" value="tea">
+			</fieldset>
+
+			<fieldset class="price">
+				<legend>How much do you want to pay?</legend>
+
+				<label for="expensive">$$</label>
+				<input type="radio" name="price" id="expensive" value="$$">
+
+				<label for="cheap">$</label>
+				<input type="radio" name="price" id="cheap" value="$">
+
+			</fieldset>
+
+			<div class="submit-container">
+				<input type="submit" value="Get me a treat!">
+			</div>
+
+		</form>
+
+		<section class="results">
+			<!-- dynamic results will be added here -->
+		</section>
+
+	</main>
+	<script src="script.js"></script>
+</body>
+
+</html>
