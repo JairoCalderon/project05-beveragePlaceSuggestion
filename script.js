@@ -80,6 +80,7 @@ const drinks = {
 //display the result
 //----create a new html paragraph to append the location name of the shop
 
+
 //variables set by selecting DOM elements
 const formEl = document.querySelector("form");
 const resultSection = document.querySelector(".results");
@@ -90,7 +91,6 @@ const randomChoice = (optionArray) => {
   const index = Math.floor(Math.random() * optionArray.length)
   return optionArray[index]
 }
-
 
 formEl.addEventListener("submit", function (e) {
   e.preventDefault();
@@ -113,5 +113,6 @@ formEl.addEventListener("submit", function (e) {
 
   paragraphElmt.innerHTML = `${suggestedPlaceToVisit.title}`;
   resultSection.appendChild(paragraphElmt);
-
 })
+
+
